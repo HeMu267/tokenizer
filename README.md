@@ -24,4 +24,31 @@ A Node.js REST API for a custom tokenizer that learns vocabulary from text, enco
 - dotenv for configuration  
 
 ---
+## API Endpoints
 
+### 1. Train Vocabulary
+
+**POST** `/api/tokenizer/train`
+
+- **Description:** Train the tokenizer vocabulary with input text.
+- **Headers:**  
+  `Content-Type: application/json`
+- **Request Body:**
+```json
+{
+  "text": "Your training text goes here."
+}
+
+### Encode Text
+
+**POST** `/api/tokenizer/encode`
+
+- **Description:** Encode input text into token IDs.  
+- **Headers:**  
+  `Content-Type: application/json`  
+- **Request Body:**
+
+```json
+{
+  "text": "Hello world!"
+}
