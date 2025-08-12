@@ -38,7 +38,7 @@ A Node.js REST API for a custom tokenizer that learns vocabulary from text, enco
 {
   "text": "Your training text goes here."
 }
-
+```
 ### Encode Text
 
 **POST** `/api/tokenizer/encode`
@@ -52,3 +52,19 @@ A Node.js REST API for a custom tokenizer that learns vocabulary from text, enco
 {
   "text": "Hello world!"
 }
+```
+
+### Decode Text
+
+**POST** `/api/tokenizer/decode`
+
+- **Description:** decode input ids into token text.  
+- **Headers:**  
+  `Content-Type: application/json`  
+- **Request Body:**
+
+```json
+{
+  "ids": [5, 6, 7]
+}
+```
